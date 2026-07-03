@@ -9,7 +9,8 @@ import {
   ChevronDown, 
   Star,
   CheckCircle,
-  ExternalLink
+  ExternalLink,
+  Phone
 } from "lucide-react";
 import Image from "next/image";
 
@@ -33,75 +34,96 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-kerala-ivory text-kerala-brown overflow-hidden">
       
+      {/* Header / Logo Section */}
+      <header className="absolute top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-12 py-6 pointer-events-none">
+        <div className="flex items-center">
+          {/* Logo Container */}
+          <div className="w-20 h-20 md:w-32 md:h-32 relative drop-shadow-xl pointer-events-auto filter hover:scale-105 transition-transform cursor-pointer">
+            <Image 
+              src="/paat.PNG" 
+              alt="Kerala Paadunnu Logo" 
+              fill 
+              className="object-contain"
+            />
+          </div>
+        </div>
+      </header>
+
       {/* Hero Section */}
-      <section className="relative min-h-screen flex flex-col items-center justify-center pt-20 pb-10 px-4 text-center overflow-hidden">
+      <section className="relative min-h-[90vh] flex flex-col items-center justify-center pt-24 pb-16 px-4 text-center overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/hero-bg.png"
+            src="/hero-section-keralam.png"
             alt="Kerala Music Patriotism Background"
             fill
             className="object-cover object-center"
             priority
           />
-          {/* Elegant Overlay to ensure text pops up while showing the beautiful background */}
-          <div className="absolute inset-0 bg-gradient-to-b from-kerala-ivory/90 via-kerala-ivory/60 to-kerala-ivory/95 backdrop-blur-sm"></div>
+          {/* Lighter Overlay to let the beautiful image shine, with a gradient fade at bottom */}
+          <div className="absolute inset-0 bg-gradient-to-b from-white/60 via-white/40 to-kerala-ivory/95"></div>
         </div>
 
         <motion.div 
           initial="hidden" 
           animate="visible" 
           variants={fadeIn}
-          className="z-10 max-w-4xl mx-auto flex flex-col items-center relative"
+          className="z-10 max-w-5xl mx-auto flex flex-col items-center relative"
         >
           {/* Floating Music Notes */}
           <motion.div 
-            animate={{ y: [0, -10, 0] }} 
-            transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
-            className="mb-6 text-kerala-gold drop-shadow-md"
+            animate={{ y: [0, -12, 0] }} 
+            transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
+            className="mb-8 p-4 bg-white/40 backdrop-blur-md rounded-full shadow-lg border border-white/50 text-kerala-gold"
           >
-            <Music size={56} />
+            <Music size={40} />
           </motion.div>
 
-          <h1 className="text-5xl md:text-7xl font-bold text-kerala-green mb-6 leading-tight drop-shadow-md font-malayalam">
+          {/* Main Title with Gradient and deep shadow */}
+          <h1 className="text-6xl md:text-8xl font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-kerala-green to-[#0f3b22] mb-6 leading-tight font-malayalam drop-shadow-[0_4px_4px_rgba(255,255,255,0.8)] filter">
             കേരളം പാടുന്നു ദേശത്തിനായ്
           </h1>
           
-          <h2 className="text-2xl md:text-3xl font-semibold text-kerala-brown mb-10 font-malayalam drop-shadow-sm">
+          <h2 className="text-2xl md:text-4xl font-bold text-[#5c3a21] mb-6 font-malayalam drop-shadow-[0_2px_2px_rgba(255,255,255,0.9)]">
             10000 ഗായകരുടെ ദേശഭക്തിഗാനം
           </h2>
 
-          <div className="flex flex-wrap justify-center gap-5 mb-10">
-            <div className="flex items-center gap-2 bg-white/80 backdrop-blur-md px-6 py-3 rounded-full border border-kerala-gold/50 shadow-lg text-kerala-brown">
-              <Calendar className="text-kerala-green" size={22} />
-              <span className="font-semibold text-lg font-malayalam">2026 ആഗസ്റ്റ് 15</span>
+          <div className="inline-flex items-center justify-center gap-2 bg-white/70 backdrop-blur-md px-6 py-2.5 rounded-full border border-kerala-green/40 text-kerala-green font-bold text-lg md:text-xl font-malayalam mb-12 shadow-sm drop-shadow-[0_1px_1px_rgba(255,255,255,1)]">
+            <Users size={22} className="text-[#0f3b22]" />
+            സംഘാടകർ : തിരുവനന്തപുരം പാട്ടിന്റെ കൂട്ടുകാർ
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-6 mb-12">
+            <div className="flex items-center gap-3 bg-white/90 backdrop-blur-lg px-8 py-4 rounded-full border border-kerala-gold/60 shadow-[0_8px_30px_rgb(0,0,0,0.08)] text-kerala-brown transform hover:-translate-y-1 transition-transform">
+              <Calendar className="text-kerala-gold" size={24} />
+              <span className="font-bold text-xl font-inter">2026 ആഗസ്റ്റ് 15</span>
             </div>
-            <div className="flex items-center gap-2 bg-white/80 backdrop-blur-md px-6 py-3 rounded-full border border-kerala-gold/50 shadow-lg text-kerala-brown">
-              <MapPin className="text-kerala-green" size={22} />
-              <span className="font-semibold text-lg font-malayalam">കോഴിക്കോട്</span>
+            <div className="flex items-center gap-3 bg-white/90 backdrop-blur-lg px-8 py-4 rounded-full border border-kerala-gold/60 shadow-[0_8px_30px_rgb(0,0,0,0.08)] text-kerala-brown transform hover:-translate-y-1 transition-transform">
+              <MapPin className="text-kerala-gold" size={24} />
+              <span className="font-bold text-xl font-inter">കോഴിക്കോട്</span>
             </div>
           </div>
 
-          <p className="text-xl md:text-2xl font-medium text-kerala-brown/90 mb-12 max-w-2xl font-malayalam italic drop-shadow-sm bg-white/30 px-6 py-4 rounded-2xl backdrop-blur-sm border border-white/40">
+          <p className="text-xl md:text-3xl font-medium text-kerala-brown mb-14 max-w-3xl font-malayalam italic leading-relaxed drop-shadow-sm bg-white/50 px-8 py-6 rounded-3xl backdrop-blur-md border border-white/60 shadow-xl">
             “സ്വാതന്ത്ര്യദിനത്തിൽ കേരളത്തിന്റെ സംഗീത ശബ്ദം ദേശത്തിനായി ഒന്നിക്കുന്നു.”
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+          <div className="flex flex-col sm:flex-row gap-6 w-full sm:w-auto">
             <a 
               href={GOOGLE_FORM_URL} 
               target="_blank" 
               rel="noopener noreferrer"
-              className="bg-kerala-green hover:bg-kerala-green-light text-white font-bold py-4 px-8 rounded-full shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all flex items-center justify-center gap-2 text-lg border-2 border-kerala-green"
+              className="bg-gradient-to-r from-kerala-green to-[#0f3b22] text-white font-bold py-5 px-10 rounded-full shadow-[0_10px_40px_-10px_rgba(27,77,62,0.8)] hover:shadow-[0_15px_50px_-10px_rgba(27,77,62,1)] hover:-translate-y-1.5 transition-all flex items-center justify-center gap-3 text-xl border border-[#0f3b22]"
             >
               Apply Now
-              <ExternalLink size={20} />
+              <ExternalLink size={24} />
             </a>
             <button 
               onClick={scrollToDetails}
-              className="bg-white/90 hover:bg-white text-kerala-green font-bold py-4 px-8 rounded-full border-2 border-kerala-green shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all flex items-center justify-center gap-2 text-lg backdrop-blur-sm"
+              className="bg-white/90 hover:bg-white text-kerala-green font-bold py-5 px-10 rounded-full shadow-[0_10px_40px_-10px_rgba(0,0,0,0.1)] hover:shadow-[0_15px_50px_-10px_rgba(0,0,0,0.2)] hover:-translate-y-1.5 transition-all flex items-center justify-center gap-3 text-xl backdrop-blur-md border border-kerala-gold/40"
             >
               View Details
-              <ChevronDown size={20} />
+              <ChevronDown size={24} />
             </button>
           </div>
         </motion.div>
@@ -316,15 +338,67 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Contact Section */}
+      <section className="py-20 px-4 bg-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-kerala-ivory/50 to-white pointer-events-none"></div>
+        <div className="max-w-4xl mx-auto text-center relative z-10">
+          <motion.div 
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+            variants={fadeIn}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-kerala-green mb-10 font-malayalam">
+              കൂടുതൽ വിവരങ്ങൾക്ക് ബന്ധപ്പെടുക
+            </h2>
+            
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
+              <a 
+                href="tel:+919446767455" 
+                className="flex items-center gap-4 bg-white px-8 py-5 rounded-full border border-kerala-gold/40 hover:border-kerala-green transition-all shadow-lg hover:shadow-2xl hover:-translate-y-1 group w-full sm:w-auto justify-center"
+              >
+                <div className="bg-kerala-green/10 p-3 rounded-full group-hover:bg-kerala-green transition-colors">
+                  <Phone className="text-kerala-green group-hover:text-white" size={24} />
+                </div>
+                <span className="text-xl md:text-2xl font-bold text-kerala-brown font-inter tracking-wide">+91 94467 67455</span>
+              </a>
+
+              <a 
+                href="tel:+919495303176" 
+                className="flex items-center gap-4 bg-white px-8 py-5 rounded-full border border-kerala-gold/40 hover:border-kerala-green transition-all shadow-lg hover:shadow-2xl hover:-translate-y-1 group w-full sm:w-auto justify-center"
+              >
+                <div className="bg-kerala-green/10 p-3 rounded-full group-hover:bg-kerala-green transition-colors">
+                  <Phone className="text-kerala-green group-hover:text-white" size={24} />
+                </div>
+                <span className="text-xl md:text-2xl font-bold text-kerala-brown font-inter tracking-wide">+91 94953 03176</span>
+              </a>
+            </div>
+            <p className="mt-10 text-kerala-brown/70 font-medium font-malayalam text-lg">
+              (സംശയങ്ങൾക്കും കൂടുതൽ വിവരങ്ങൾക്കും വിളിക്കുകയോ വാട്സാപ്പ് ചെയ്യുകയോ ചെയ്യാം)
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Footer */}
-      <footer className="bg-kerala-brown text-white py-12 px-4 text-center">
-        <div className="max-w-4xl mx-auto">
-          <Music className="mx-auto text-kerala-gold mb-6" size={32} />
-          <h2 className="text-2xl font-bold text-kerala-gold mb-2 font-malayalam">
+      <footer className="bg-kerala-brown text-white py-16 px-4 text-center relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-transparent pointer-events-none"></div>
+        <div className="max-w-4xl mx-auto relative z-10 flex flex-col items-center">
+          
+          <div className="w-24 h-24 md:w-32 md:h-32 relative drop-shadow-2xl mb-6">
+            <Image 
+              src="/paat.PNG" 
+              alt="Kerala Paadunnu Logo" 
+              fill 
+              className="object-contain"
+            />
+          </div>
+
+          <h2 className="text-3xl font-bold text-kerala-gold mb-3 font-malayalam tracking-wide">
             കേരളം പാടുന്നു ദേശത്തിനായ്
           </h2>
-          <p className="text-white/60 mb-6">© 2026</p>
-          <div className="flex items-center justify-center gap-4 text-sm text-kerala-gold/80 font-inter uppercase tracking-widest">
+          <p className="text-white/60 mb-8 font-inter">© 2026 All Rights Reserved</p>
+          <div className="flex items-center justify-center gap-4 text-sm text-kerala-gold/80 font-inter uppercase tracking-[0.2em] font-semibold">
             <span>Music</span>
             <span className="w-1.5 h-1.5 rounded-full bg-kerala-green-light"></span>
             <span>Culture</span>
