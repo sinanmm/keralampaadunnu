@@ -34,20 +34,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-kerala-ivory text-kerala-brown overflow-hidden">
       
-      {/* Header / Logo Section */}
-      <header className="absolute top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-12 py-6 pointer-events-none">
-        <div className="flex items-center">
-          {/* Logo Container */}
-          <div className="w-48 h-48 md:w-72 md:h-72 lg:w-96 lg:h-96 relative drop-shadow-xl pointer-events-auto filter hover:scale-105 transition-transform cursor-pointer">
-            <Image 
-              src="/paat.PNG" 
-              alt="Kerala Paadunnu Logo" 
-              fill 
-              className="object-contain"
-            />
-          </div>
-        </div>
-      </header>
+
 
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex flex-col items-center justify-center pt-24 pb-16 px-4 text-center overflow-hidden">
@@ -70,13 +57,19 @@ export default function Home() {
           variants={fadeIn}
           className="z-10 max-w-5xl mx-auto flex flex-col items-center relative"
         >
-          {/* Floating Music Notes */}
+          {/* Centered Logo */}
           <motion.div 
             animate={{ y: [0, -12, 0] }} 
             transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-            className="mb-8 p-4 bg-white/40 backdrop-blur-md rounded-full shadow-lg border border-white/50 text-kerala-gold"
+            className="mb-2 w-[18rem] h-[18rem] sm:w-[24rem] sm:h-[24rem] md:w-[36rem] md:h-[36rem] lg:w-[48rem] lg:h-[48rem] relative drop-shadow-2xl pointer-events-auto filter hover:scale-105 transition-transform cursor-pointer"
           >
-            <Music size={40} />
+            <Image 
+              src="/paat.PNG" 
+              alt="Kerala Paadunnu Logo" 
+              fill 
+              className="object-contain"
+              priority
+            />
           </motion.div>
 
           {/* Main Title with Gradient and deep shadow */}
