@@ -41,14 +41,14 @@ export default function Home() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/hero-section-keralam.png"
+            src="/hero-bg.png"
             alt="Kerala Music Patriotism Background"
             fill
             className="object-cover object-center"
             priority
           />
           {/* Lighter Overlay to let the beautiful image shine, with a gradient fade at bottom */}
-          <div className="absolute inset-0 bg-gradient-to-b from-white/60 via-white/40 to-kerala-ivory/95"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-white/40 via-white/20 to-kerala-ivory/95"></div>
         </div>
 
         <motion.div 
@@ -73,15 +73,15 @@ export default function Home() {
           </motion.div>
 
           {/* Main Title with Gradient and deep shadow */}
-          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-kerala-green to-[#0f3b22] mb-6 leading-tight font-malayalam drop-shadow-[0_4px_4px_rgba(255,255,255,0.8)] filter w-full break-words">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-kerala-green to-[#0f3b22] mb-6 leading-tight font-anek tracking-tight drop-shadow-[0_4px_4px_rgba(255,255,255,0.8)] filter w-full break-words">
             കേരളം പാടുന്നു ദേശത്തിനായ്
           </h1>
           
-          <h2 className="text-xl sm:text-2xl md:text-4xl font-bold text-[#5c3a21] mb-6 font-malayalam drop-shadow-[0_2px_2px_rgba(255,255,255,0.9)] w-full break-words">
+          <h2 className="text-xl sm:text-2xl md:text-4xl font-bold text-[#5c3a21] mb-6 font-anek drop-shadow-[0_2px_2px_rgba(255,255,255,0.9)] w-full break-words">
             10000 ഗായകരുടെ ദേശഭക്തിഗാനം
           </h2>
 
-          <div className="inline-flex flex-col sm:flex-row items-center justify-center gap-2 bg-white/70 backdrop-blur-md px-6 py-3 md:py-2.5 rounded-3xl md:rounded-full border border-kerala-green/40 text-kerala-green font-bold text-base md:text-xl font-malayalam mb-12 shadow-sm drop-shadow-[0_1px_1px_rgba(255,255,255,1)] text-center w-full sm:w-auto">
+          <div className="inline-flex flex-col sm:flex-row items-center justify-center gap-2 bg-white/70 backdrop-blur-md px-6 py-3 md:py-2.5 rounded-3xl md:rounded-full border border-kerala-green/40 text-kerala-green font-bold text-base md:text-xl font-anek mb-12 shadow-sm drop-shadow-[0_1px_1px_rgba(255,255,255,1)] text-center w-full sm:w-auto">
             <Users size={22} className="text-[#0f3b22] flex-shrink-0" />
             <span>സംഘാടകർ : തിരുവനന്തപുരം പാട്ടിന്റെ കൂട്ടുകാർ</span>
           </div>
@@ -97,7 +97,7 @@ export default function Home() {
             </div>
           </div>
 
-          <p className="text-lg md:text-3xl font-medium text-kerala-brown mb-14 max-w-3xl font-malayalam italic leading-relaxed drop-shadow-sm bg-white/50 px-6 md:px-8 py-4 md:py-6 rounded-3xl backdrop-blur-md border border-white/60 shadow-xl w-full">
+          <p className="text-lg md:text-3xl font-medium text-kerala-brown mb-14 max-w-3xl font-anek italic leading-relaxed drop-shadow-sm bg-white/50 px-6 md:px-8 py-4 md:py-6 rounded-3xl backdrop-blur-md border border-white/60 shadow-xl w-full">
             “സ്വാതന്ത്ര്യദിനത്തിൽ കേരളത്തിന്റെ സംഗീത ശബ്ദം ദേശത്തിനായി ഒന്നിക്കുന്നു.”
           </p>
 
@@ -137,7 +137,7 @@ export default function Home() {
             <span className="text-xl">🎶</span> Official Program Video
           </div>
 
-          <h2 className="text-3xl md:text-5xl font-bold text-kerala-green font-malayalam mb-5 drop-shadow-sm">
+          <h2 className="text-3xl md:text-5xl font-bold text-kerala-green font-anek tracking-tight mb-5 drop-shadow-sm">
             പരിപാടിയുടെ ദൃശ്യാവിഷ്കാരം
           </h2>
 
@@ -178,7 +178,7 @@ export default function Home() {
             <div className="flex justify-center mb-4">
               <div className="w-16 h-1 bg-kerala-gold rounded-full"></div>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-kerala-green mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-kerala-green mb-8 font-anek tracking-tight">
               പരിപാടിയെ കുറിച്ച്
             </h2>
             <p className="text-xl leading-relaxed text-kerala-brown/90 max-w-3xl mx-auto font-malayalam">
@@ -210,7 +210,7 @@ export default function Home() {
                   {item.icon}
                 </div>
                 <h3 className="text-sm font-semibold text-kerala-brown/60 uppercase tracking-wider mb-2 font-inter">{item.title}</h3>
-                <p className="text-xl font-bold text-kerala-green font-malayalam">{item.value}</p>
+                <p className="text-xl font-bold text-kerala-green font-anek tracking-wide">{item.value}</p>
               </motion.div>
             ))}
           </motion.div>
@@ -230,7 +230,7 @@ export default function Home() {
             <div className="flex justify-center mb-4">
               <div className="w-16 h-1 bg-kerala-gold rounded-full"></div>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-kerala-green">
+            <h2 className="text-3xl md:text-4xl font-bold text-kerala-green font-anek tracking-tight">
               പ്രധാന പ്രത്യേകതകൾ
             </h2>
           </motion.div>
@@ -274,7 +274,7 @@ export default function Home() {
             variants={fadeIn}
             className="text-center"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-kerala-gold mb-10">
+            <h2 className="text-3xl md:text-4xl font-bold text-kerala-gold mb-10 font-anek tracking-wide">
               സമ്മതപത്രം
             </h2>
             
@@ -300,7 +300,7 @@ export default function Home() {
             viewport={{ once: true, margin: "-100px" }}
             variants={fadeIn}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-kerala-green mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-kerala-green mb-8 font-anek tracking-tight">
               ഇപ്പോൾ തന്നെ അപേക്ഷിക്കൂ
             </h2>
             
@@ -341,7 +341,7 @@ export default function Home() {
             viewport={{ once: true, margin: "-50px" }}
             variants={fadeIn}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-kerala-green mb-10 font-malayalam">
+            <h2 className="text-3xl md:text-4xl font-bold text-kerala-green mb-10 font-anek tracking-tight">
               കൂടുതൽ വിവരങ്ങൾക്ക് ബന്ധപ്പെടുക
             </h2>
             
@@ -387,7 +387,7 @@ export default function Home() {
             />
           </div>
 
-          <h2 className="text-3xl font-bold text-kerala-gold mb-3 font-malayalam tracking-wide">
+          <h2 className="text-3xl font-bold text-kerala-gold mb-3 font-anek tracking-wide">
             കേരളം പാടുന്നു ദേശത്തിനായ്
           </h2>
           <p className="text-white/60 mb-8 font-inter">© 2026 All Rights Reserved</p>

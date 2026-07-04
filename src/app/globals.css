@@ -14,6 +14,7 @@
   --color-kerala-ivory: #FDFBF7;
   --font-malayalam: var(--font-malayalam), sans-serif;
   --font-inter: var(--font-inter), sans-serif;
+  --font-anek: var(--font-anek), sans-serif;
 }
 
 body {

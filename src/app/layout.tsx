@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
-import { Noto_Sans_Malayalam, Inter } from "next/font/google";
+import { Noto_Sans_Malayalam, Inter, Anek_Malayalam } from "next/font/google";
 import "./globals.css";
+
+const anekMalayalam = Anek_Malayalam({ 
+  subsets: ["malayalam", "latin"],
+  variable: "--font-anek",
+  weight: ["300", "400", "500", "600", "700", "800"]
+});
 
 const notoSansMalayalam = Noto_Sans_Malayalam({ 
   subsets: ["malayalam", "latin"],
@@ -26,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="ml" className="scroll-smooth">
       <body
-        className={`${notoSansMalayalam.variable} ${inter.variable} antialiased`}
+        className={`${notoSansMalayalam.variable} ${inter.variable} ${anekMalayalam.variable} antialiased`}
       >
         {children}
       </body>
