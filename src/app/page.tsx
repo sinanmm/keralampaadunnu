@@ -80,31 +80,31 @@ export default function Home() {
           </motion.div>
 
           {/* Main Title with Gradient and deep shadow */}
-          <h1 className="text-6xl md:text-8xl font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-kerala-green to-[#0f3b22] mb-6 leading-tight font-malayalam drop-shadow-[0_4px_4px_rgba(255,255,255,0.8)] filter">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-kerala-green to-[#0f3b22] mb-6 leading-tight font-malayalam drop-shadow-[0_4px_4px_rgba(255,255,255,0.8)] filter w-full break-words">
             കേരളം പാടുന്നു ദേശത്തിനായ്
           </h1>
           
-          <h2 className="text-2xl md:text-4xl font-bold text-[#5c3a21] mb-6 font-malayalam drop-shadow-[0_2px_2px_rgba(255,255,255,0.9)]">
+          <h2 className="text-xl sm:text-2xl md:text-4xl font-bold text-[#5c3a21] mb-6 font-malayalam drop-shadow-[0_2px_2px_rgba(255,255,255,0.9)] w-full break-words">
             10000 ഗായകരുടെ ദേശഭക്തിഗാനം
           </h2>
 
-          <div className="inline-flex items-center justify-center gap-2 bg-white/70 backdrop-blur-md px-6 py-2.5 rounded-full border border-kerala-green/40 text-kerala-green font-bold text-lg md:text-xl font-malayalam mb-12 shadow-sm drop-shadow-[0_1px_1px_rgba(255,255,255,1)]">
-            <Users size={22} className="text-[#0f3b22]" />
-            സംഘാടകർ : തിരുവനന്തപുരം പാട്ടിന്റെ കൂട്ടുകാർ
+          <div className="inline-flex flex-col sm:flex-row items-center justify-center gap-2 bg-white/70 backdrop-blur-md px-6 py-3 md:py-2.5 rounded-3xl md:rounded-full border border-kerala-green/40 text-kerala-green font-bold text-base md:text-xl font-malayalam mb-12 shadow-sm drop-shadow-[0_1px_1px_rgba(255,255,255,1)] text-center w-full sm:w-auto">
+            <Users size={22} className="text-[#0f3b22] flex-shrink-0" />
+            <span>സംഘാടകർ : തിരുവനന്തപുരം പാട്ടിന്റെ കൂട്ടുകാർ</span>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-6 mb-12">
-            <div className="flex items-center gap-3 bg-white/90 backdrop-blur-lg px-8 py-4 rounded-full border border-kerala-gold/60 shadow-[0_8px_30px_rgb(0,0,0,0.08)] text-kerala-brown transform hover:-translate-y-1 transition-transform">
-              <Calendar className="text-kerala-gold" size={24} />
-              <span className="font-bold text-xl font-inter">2026 ആഗസ്റ്റ് 15</span>
+          <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-4 md:gap-6 mb-12 w-full">
+            <div className="flex items-center justify-center gap-3 bg-white/90 backdrop-blur-lg px-6 md:px-8 py-3 md:py-4 rounded-full border border-kerala-gold/60 shadow-[0_8px_30px_rgb(0,0,0,0.08)] text-kerala-brown transform hover:-translate-y-1 transition-transform w-full sm:w-auto">
+              <Calendar className="text-kerala-gold flex-shrink-0" size={24} />
+              <span className="font-bold text-lg md:text-xl font-inter">2026 ആഗസ്റ്റ് 15</span>
             </div>
-            <div className="flex items-center gap-3 bg-white/90 backdrop-blur-lg px-8 py-4 rounded-full border border-kerala-gold/60 shadow-[0_8px_30px_rgb(0,0,0,0.08)] text-kerala-brown transform hover:-translate-y-1 transition-transform">
-              <MapPin className="text-kerala-gold" size={24} />
-              <span className="font-bold text-xl font-inter">കോഴിക്കോട്</span>
+            <div className="flex items-center justify-center gap-3 bg-white/90 backdrop-blur-lg px-6 md:px-8 py-3 md:py-4 rounded-full border border-kerala-gold/60 shadow-[0_8px_30px_rgb(0,0,0,0.08)] text-kerala-brown transform hover:-translate-y-1 transition-transform w-full sm:w-auto">
+              <MapPin className="text-kerala-gold flex-shrink-0" size={24} />
+              <span className="font-bold text-lg md:text-xl font-inter">കോഴിക്കോട്</span>
             </div>
           </div>
 
-          <p className="text-xl md:text-3xl font-medium text-kerala-brown mb-14 max-w-3xl font-malayalam italic leading-relaxed drop-shadow-sm bg-white/50 px-8 py-6 rounded-3xl backdrop-blur-md border border-white/60 shadow-xl">
+          <p className="text-lg md:text-3xl font-medium text-kerala-brown mb-14 max-w-3xl font-malayalam italic leading-relaxed drop-shadow-sm bg-white/50 px-6 md:px-8 py-4 md:py-6 rounded-3xl backdrop-blur-md border border-white/60 shadow-xl w-full">
             “സ്വാതന്ത്ര്യദിനത്തിൽ കേരളത്തിന്റെ സംഗീത ശബ്ദം ദേശത്തിനായി ഒന്നിക്കുന്നു.”
           </p>
 
