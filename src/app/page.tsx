@@ -38,7 +38,7 @@ export default function Home() {
       <header className="absolute top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-12 py-6 pointer-events-none">
         <div className="flex items-center">
           {/* Logo Container */}
-          <div className="w-20 h-20 md:w-32 md:h-32 relative drop-shadow-xl pointer-events-auto filter hover:scale-105 transition-transform cursor-pointer">
+          <div className="w-32 h-32 md:w-48 md:h-48 lg:w-56 lg:h-56 relative drop-shadow-xl pointer-events-auto filter hover:scale-105 transition-transform cursor-pointer">
             <Image 
               src="/paat.PNG" 
               alt="Kerala Paadunnu Logo" 
@@ -385,7 +385,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-transparent pointer-events-none"></div>
         <div className="max-w-4xl mx-auto relative z-10 flex flex-col items-center">
           
-          <div className="w-24 h-24 md:w-32 md:h-32 relative drop-shadow-2xl mb-6">
+          <div className="w-32 h-32 md:w-48 md:h-48 lg:w-56 lg:h-56 relative drop-shadow-2xl mb-6">
             <Image 
               src="/paat.PNG" 
               alt="Kerala Paadunnu Logo" 
